@@ -17,9 +17,7 @@ public class FormularioPage {
 		metodo.escrever(el.endereco, endereco);
 		metodo.escrever(el.cidade, cidade);
 
-		// metodo.escrever(this.enviarArquivo, enviarArquivo);
-
-	}
+		}
 
 	public void concordarTermos() {
 		try {
@@ -79,5 +77,12 @@ public class FormularioPage {
 		} catch (Exception e) {
 			System.out.println("Clicar Duas Vezes Não Foi Executado com Sucesso");
 		}
+	}
+	public void abrirNovaAba() {
+		
+		
+		
+		
+		
 	}
 }
