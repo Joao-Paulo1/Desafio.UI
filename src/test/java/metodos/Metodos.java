@@ -111,7 +111,7 @@ public class Metodos extends Drivers {
 		pausa(5000);
 		Alert alert = driver.switchTo().alert();
 		assertEquals(alert.getText(), textoEsperado);
-	alert.accept();
+		alert.accept();
 	}
 		
 		
