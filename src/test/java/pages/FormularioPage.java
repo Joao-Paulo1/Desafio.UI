@@ -65,9 +65,9 @@ public class FormularioPage {
 		}
 
 	}
-
+// sera usado para clicar duas vezes 
 	public void clicarDuasVezes(String texto) {
-		try {
+		try {  
 
 			metodo.clicar(el.formulario);
 			metodo.duploClique(el.clicarduasVezes);
@@ -78,7 +78,7 @@ public class FormularioPage {
 			System.out.println("Clicar Duas Vezes Não Foi Executado com Sucesso");
 		}
 	}
-	public void abrirNovaAba() {
+	public void abrirNovaAb() {
 		
 		
 		
