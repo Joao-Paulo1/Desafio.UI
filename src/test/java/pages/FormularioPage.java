@@ -78,7 +78,7 @@ public class FormularioPage {
 			System.out.println("Clicar Duas Vezes Não Foi Executado com Sucesso");
 		}
 	}
-	public void abrirNovaAb() {
+	public void abrirNovaAba() {
 		
 		
 		
