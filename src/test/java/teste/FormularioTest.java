@@ -1,6 +1,5 @@
 package teste;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,12 +17,13 @@ public class FormularioTest {
 	@BeforeEach
 	public void antesDoTest() {
 		Executa.iniciarTest();
+		pages.acessarFormulario();
+		pages.validarAlert("Pop-up aberto após 5 segundos!");
 
 	}
 
-	@AfterEach
+	//@AfterEach
 	public void depoisDoTest() {
-
 		Executa.depoisDoTest();
 
 	}
@@ -31,13 +31,7 @@ public class FormularioTest {
 	@Test
 	public void formulario() {
 		pages.preencherFormulario(dados.gerarNome(), dados.gerarEmail(), "35998715506000", dados.gerarEndereco(),
-				"Alfenas");
-
-	}
-
-	@Test
-	public void validarAlert() {
-		pages.validaralert("Pop-up aberto após 5 segundos!");
+				"Alfenas", "C:\\Program Files");
 
 	}
 
@@ -49,13 +43,12 @@ public class FormularioTest {
 
 	@Test
 	public void clicarTermosNao() {
-		pages.naoConcodarTermos("Pop-up aberto após 5 segundos!");
+		pages.naoConcodarTermos();
 
 	}
 
 	@Test
 	public void passarMousse() {
-
 		pages.passarMouse("Você passou o mouse aqui!");
 
 	}

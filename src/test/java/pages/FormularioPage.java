@@ -8,20 +8,28 @@ public class FormularioPage {
 	Metodos metodo = new Metodos();
 	ElementosFormulario el = new ElementosFormulario();
 
-	public void preencherFormulario(String nome, String email, String telefone, String endereco, String cidade) {
-
+	public void acessarFormulario() {
 		metodo.clicar(el.formulario);
+
+	}
+
+	public void preencherFormulario(String nome, String email, String telefone, String endereco, String cidade,
+			String upload) {
+
 		metodo.escrever(el.nome, nome);
 		metodo.escrever(el.email, email);
 		metodo.escrever(el.telefone, telefone);
 		metodo.escrever(el.endereco, endereco);
 		metodo.escrever(el.cidade, cidade);
+		metodo.uploadDeArquivo(el.upload, upload);
+		metodo.clicar(el.btnEnviarForm);
+		metodo.validarTexto(el.msgDadosEnviados, "Dados Enviados");
 
-		}
+	}
 
 	public void concordarTermos() {
 		try {
-			metodo.clicar(el.formulario);
+
 			metodo.clicar(el.concordatermos);
 			System.out.println("Concordar Termos Executado com sucesso");
 		} catch (Exception e) {
@@ -30,10 +38,10 @@ public class FormularioPage {
 
 	}
 
-	public void naoConcodarTermos(String texto) {
+	public void naoConcodarTermos() {
 		try {
-			metodo.clicar(el.formulario);
-			metodo.validarAlertDe5Segundos(texto);
+
+			
 			metodo.clicar(el.naoconcordaTermos);
 			System.out.println("Não Concordar Termos foi  executado Com Sucesso");
 		} catch (Exception e) {
@@ -41,9 +49,9 @@ public class FormularioPage {
 		}
 	}
 
-	public void validaralert(String texto) {
+	public void validarAlert(String texto) {
 		try {
-			metodo.clicar(el.formulario);
+
 			metodo.validarAlertDe5Segundos(texto);
 			System.out.println("Validar Alert  foi executado com Sucesso");
 
@@ -55,7 +63,7 @@ public class FormularioPage {
 
 	public void passarMouse(String texto) {
 		try {
-			metodo.clicar(el.formulario);
+
 			metodo.mouseOver(el.passarMOuse);
 			metodo.validarAlert(texto);
 			System.out.println("Passar o mouse foi executado com sucesso");
@@ -65,24 +73,29 @@ public class FormularioPage {
 		}
 
 	}
-// sera usado para clicar duas vezes 
-	public void clicarDuasVezes(String texto) {
-		try {  
 
-			metodo.clicar(el.formulario);
+	// sera usado para clicar duas vezes
+	public void clicarDuasVezes(String texto) {
+		try {
+
 			metodo.duploClique(el.clicarduasVezes);
 			metodo.validarAlert(texto);
-			System.out.println("Clicar Duas vezes Executado com SUcesso");
+			System.out.println("Clicar Duas vezes Executado com Sucesso");
 
 		} catch (Exception e) {
 			System.out.println("Clicar Duas Vezes Não Foi Executado com Sucesso");
 		}
 	}
+
 	public void abrirNovaAba() {
 		
 		
 		
 		
-		
+	}
+
+	public void abrirNovaAb() {
+
+
 	}
 }
